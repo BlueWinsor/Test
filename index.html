@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the help bubble container */
+        .help-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style for the help icon */
+        .help-icon::before {
+            content: "?";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Style for the help bubble */
+        .help-bubble {
+            visibility: hidden;
+            width: 160px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Show the help bubble on hover */
+        .help-container:hover .help-bubble {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Help container -->
+<div class="help-container">
+    <!-- Help icon -->
+    <div class="help-icon"></div>
+
+    <!-- Help bubble content -->
+    <div class="help-bubble">
+        Help achebed
+    </div>
+</div>
+
+</body>
+</html>
